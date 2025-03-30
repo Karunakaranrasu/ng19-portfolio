@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 
-html,
-body {
-  height: 100%;
-}
-
 :root {
   --blue: #0000ff;
   --red: #ff0000;
@@ -12,6 +7,11 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
