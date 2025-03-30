@@ -8,6 +8,11 @@
   h2 {
     padding: 5px 0;
   }
+  h3 {
+    color: var(--blue);
+    text-decoration: underline;
+    text-decoration-color: var(--red);
+  }
 }
 
 .skills-grid {

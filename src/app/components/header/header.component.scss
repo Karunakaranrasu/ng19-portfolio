@@ -5,8 +5,11 @@ header {
   padding: 15px;
   backdrop-filter: blur(10px);
   height: 65px;
-  position: relative;
   z-index: 1000; // Ensures it's on top of other components
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 h1 {
@@ -101,9 +104,7 @@ $cross-fade-transition-time: 0.75s;
   }
 }
 
-// Mobile Responsive
-
-// HAMBURGER MENU BUTTON
+// HAMBURGER MENU
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -112,32 +113,30 @@ $cross-fade-transition-time: 0.75s;
   border: none;
   cursor: pointer;
   padding: 10px;
+  z-index: 2000;
+
+  mat-icon {
+    font-size: 28px;
+    color: white;
+  }
 }
 
 // NAVIGATION MENU
 
 nav {
-  display: flex;
-  gap: 15px;
-
   a {
     text-decoration: none;
     font-size: 18px;
-    transition: 0.3s;
-    text-decoration: none;
     margin: 0 6px;
-    font-size: 18px;
     transition: 0.3s;
   }
 
   a:hover,
   .active {
-    transform: scale(1.1);
     color: var(--red);
   }
 
   a.active {
-    font-weight: bold;
     color: var(--red);
     text-decoration: underline;
     text-decoration-color: var(--blue);
@@ -151,15 +150,18 @@ nav {
   }
 
   nav {
-    position: absolute;
+    position: fixed;
     top: 65px;
     right: 0;
-    width: 200px;
+    width: 100%;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   }
 
   nav.open {
@@ -167,8 +169,26 @@ nav {
   }
 
   nav a {
-    padding: 12px;
     display: block;
-    text-align: center;
+    padding: 12px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// TABLET RESPONSIVENESS (768px - 1024px)
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 6px 10px;
   }
 }
