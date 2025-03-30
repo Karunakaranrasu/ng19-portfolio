@@ -1,0 +1,174 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  height: 65px;
+  position: relative;
+  z-index: 1000; // Ensures it's on top of other components
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+// LOGO
+
+.box {
+  --main-bg: conic-gradient(from var(--border-angle), #213, #112 5%, #112 60%, #213 95%);
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, var(--blue), var(--red) 99%, transparent);
+  --border-angle: 0turn; // For animation.
+  display: grid;
+  place-content: center;
+  width: 70px;
+  border: solid 2px transparent;
+  border-radius: 10px;
+  background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
+  background-position: center center;
+  animation: bg-spin 3s linear infinite;
+
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  .logo {
+    padding: 4px;
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0turn;
+}
+
+// CROSS FADE
+
+$cross-fade-border-width: 2px;
+$cross-fade-border-color: var(--red);
+$cross-fade-button-padding: 5px 20px;
+$cross-fade-border-radius: 0px;
+$sec-cross-fade-background: #08f;
+$cross-fade-transition-time: 0.75s;
+
+.cross-fade {
+  display: inline-block;
+  padding: $cross-fade-button-padding;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color $cross-fade-transition-time ease-in-out;
+  z-index: 1;
+  border-radius: $cross-fade-border-radius;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+    background: rgba($sec-cross-fade-background, 0.5);
+    transition: transform $cross-fade-transition-time ease-in-out;
+    z-index: -1;
+  }
+
+  &:before {
+    transform: translate3d(100%, 0, 0) skew(20deg);
+    transform-origin: 0 0;
+  }
+
+  &:after {
+    transform: translate3d(-100%, 0, 0) skew(20deg);
+    transform-origin: 100% 100%;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      transform: translate3d(0, 0, 0) skew(20deg);
+    }
+  }
+}
+
+// Mobile Responsive
+
+// HAMBURGER MENU BUTTON
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+// NAVIGATION MENU
+
+nav {
+  display: flex;
+  gap: 15px;
+
+  a {
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    text-decoration: none;
+    margin: 0 6px;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  a:hover,
+  .active {
+    transform: scale(1.1);
+    color: var(--red);
+  }
+
+  a.active {
+    font-weight: bold;
+    color: var(--red);
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+  }
+}
+
+// MOBILE STYLES
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 200px;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav.open {
+    transform: translateX(0);
+  }
+
+  nav a {
+    padding: 12px;
+    display: block;
+    text-align: center;
+  }
+}

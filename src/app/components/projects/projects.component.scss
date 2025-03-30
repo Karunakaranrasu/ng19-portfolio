@@ -1,0 +1,128 @@
+.projects {
+  padding: 4rem 0;
+}
+
+.projects-container {
+  text-align: center;
+  padding: 20px;
+}
+
+// Variables
+$primary-color: #3a86ff;
+$primary-hover: #2563eb;
+$background-color: #f8fafc;
+$card-background: #ffffff;
+$card-shadow: rgba(0, 0, 0, 0.05);
+$text-primary: #1e293b;
+$text-secondary: #64748b;
+$border-radius: 10px;
+$transition-speed: 0.3s;
+
+// Main container
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Project cards
+.project-card {
+  background-color: $card-background;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 20px $card-shadow;
+  padding: 1.5rem;
+  transition: transform $transition-speed ease, box-shadow $transition-speed ease;
+  border-top: 4px solid $primary-color;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  h3 {
+    color: $text-primary;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 1px;
+      background-color: var(--red);
+      border-radius: 3px;
+    }
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    color: $text-primary;
+    font-weight: 600;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 1.5rem 1rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+}
+
+// Add this to your body or parent container for a clean background
+body {
+  background-color: $background-color;
+  color: $text-primary;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+  margin: 0;
+}
+
+// Optional animations for a more engaging experience
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects-grid {
+  .project-card {
+    animation: fadeIn 0.4s ease-out forwards;
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.05}s;
+      }
+    }
+  }
+}

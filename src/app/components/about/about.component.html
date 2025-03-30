@@ -1,0 +1,25 @@
+<section class="about">
+  <div class="about-content">
+    <div class="profile">
+      <div *ngIf="imageLoaded; else loadingTemplate">
+        <img [src]="imageSrc" alt="Preloaded Image" />
+      </div>
+      <ng-template #loadingTemplate>
+        <p>Loading image...</p>
+      </ng-template>
+    </div>
+    <div class="details">
+      <div class="typewriter-parent">
+        <div class="typewriter">
+          <h1>About Me</h1>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <p>Full-stack developer with 3.5+ years experience...</p>
+      <div class="about-btns">
+        <button mat-raised-button class="blue" (click)="downloadCV()">Download CV</button>
+        <button mat-stroked-button [routerLink]="['/contact']">Contact Me</button>
+      </div>
+    </div>
+  </div>
+</section>

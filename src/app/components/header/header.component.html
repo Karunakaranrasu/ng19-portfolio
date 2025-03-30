@@ -1,0 +1,18 @@
+<header>
+  <div class="box">
+    <span class="logo"><span style="color: var(--blue)">&lt;</span> RK <span style="color: var(--red)">/&gt;</span></span>
+  </div>
+
+  <!-- Hamburger Menu Icon -->
+  <button class="menu-toggle" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <nav [class.open]="isMenuOpen">
+    <a routerLink="/home" class="cross-fade" [class.active]="isActive('/home')" (click)="closeMenu()">Home</a>
+    <a routerLink="/about" class="cross-fade" [class.active]="isActive('/about')" (click)="closeMenu()">About</a>
+    <a routerLink="/skills" class="cross-fade" [class.active]="isActive('/skills')" (click)="closeMenu()">Skills</a>
+    <a routerLink="/projects" class="cross-fade" [class.active]="isActive('/projects')" (click)="closeMenu()">Projects</a>
+    <a routerLink="/contact" class="cross-fade" [class.active]="isActive('/contact')" (click)="closeMenu()">Contact</a>
+  </nav>
+</header>
