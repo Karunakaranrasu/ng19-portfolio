@@ -1,23 +1,24 @@
-Karunakaran Portfolio
+# Karunakaran Portfolio
 
-🚀 Live Demo: rkarunakaran.netlify.app
+🚀 Live Demo: [rkarunakaran.netlify.app](https://rkarunakaran.netlify.app)
 
-📌 Project Overview
+## 📌 Project Overview
 
 This is my personal portfolio website built with Angular 19, designed to showcase my skills, projects, and expertise. It features a modern UI with Angular Material and SCSS styling, providing a seamless and responsive experience across all devices.
 
-🎯 Features
+## 🎯 Features
 
 ✅ Fully Responsive - Adapts to all screen sizes (mobile, tablet, and desktop)
 ✅ Flex Layout Usage - Ensures smooth alignment and structure
 ✅ Angular Material Theming - Enhances UI consistency and performance
 ✅ Particles.js & Gradient Animation Background - Provides a visually appealing design
+✅ Custom Cursor Effect - Adds a unique interactive cursor experience
 ✅ Router-Based Navigation - Ensures seamless transitions between sections
 ✅ Performance Optimization - Faster load times with optimized assets
 ✅ Social Media Integration - Links to my profiles for easy connections
 ✅ Hosted on Netlify - Continuous deployment and version control with GitHub
 
-📚 Sections
+## 📚 Sections
 
 📌 About - Introduction and background
 
@@ -29,7 +30,7 @@ This is my personal portfolio website built with Angular 19, designed to showcas
 
 📌 Contact - Connect with me via email or social media
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Frontend: Angular 19, TypeScript, SCSS, Angular Material
 
@@ -41,11 +42,11 @@ Hosting: Netlify
 
 Version Control: Git & GitHub
 
-🚀 Setup & Installation
+## 🚀 Setup & Installation
 
 Clone the repository:
 
-git clone https://github.com/your-username/ng19-portfolio.git
+git clone https://github.com/Karunakaranrasu/ng19-portfolio.git
 
 Navigate to the project directory:
 
@@ -61,13 +62,13 @@ ng serve
 
 Open in browser: http://localhost:4200
 
-📧 Contact
+## 📧 Contact
 
 Feel free to reach out to me:
+
 📩 Email: karunakaranrasu@gmail.com
-🌐 Portfolio: rkarunakaran.netlify.app
+🌐 Portfolio: [rkarunakaran.netlify.app](https://rkarunakaran.netlify.app)
 ❌ X: @karunakaranrasu
 🔗 LinkedIn: https://www.linkedin.com/in/karunakaranrasu/
 
 ⭐ Show some love! If you like this project, give it a ⭐ on GitHub!
-
