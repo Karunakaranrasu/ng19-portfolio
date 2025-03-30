@@ -9,13 +9,21 @@ This is my personal portfolio website built with Angular 19, designed to showcas
 ## 🎯 Features
 
 ✅ Fully Responsive - Adapts to all screen sizes (mobile, tablet, and desktop)
+
 ✅ Flex Layout Usage - Ensures smooth alignment and structure
+
 ✅ Angular Material Theming - Enhances UI consistency and performance
+
 ✅ Particles.js & Gradient Animation Background - Provides a visually appealing design
+
 ✅ Custom Cursor Effect - Adds a unique interactive cursor experience
+
 ✅ Router-Based Navigation - Ensures seamless transitions between sections
+
 ✅ Performance Optimization - Faster load times with optimized assets
+
 ✅ Social Media Integration - Links to my profiles for easy connections
+
 ✅ Hosted on Netlify - Continuous deployment and version control with GitHub
 
 ## 📚 Sections
@@ -67,8 +75,11 @@ Open in browser: http://localhost:4200
 Feel free to reach out to me:
 
 📩 Email: karunakaranrasu@gmail.com
+
 🌐 Portfolio: [rkarunakaran.netlify.app](https://rkarunakaran.netlify.app)
+
 ❌ X: @karunakaranrasu
+
 🔗 LinkedIn: https://www.linkedin.com/in/karunakaranrasu/
 
 ⭐ Show some love! If you like this project, give it a ⭐ on GitHub!
