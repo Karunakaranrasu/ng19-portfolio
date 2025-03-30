@@ -6,7 +6,7 @@ header {
   backdrop-filter: blur(10px);
   height: 65px;
   z-index: 1000; // Ensures it's on top of other components
-  position: relative;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
